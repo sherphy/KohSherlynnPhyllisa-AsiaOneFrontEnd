@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import "./Banner.css";
+import articles from "../assets/data";
 import bannerPhoto from "../assets/banner.png";
 import bannerLogo from "../assets/bannerLogo.svg";
 import companyLogo from "../assets/companyLogo.png";
@@ -16,30 +17,35 @@ const Banner = () => {
 
   return (
     <>
-    <div className="bannerContainer">
-      <div className="banner">
-        <img src={bannerPhoto} id="banner-photo" />
-        <img src={companyLogo} id="company-logo" /> 
-        <img src={menuLogo} id="menu-logo" onClick={toggleMenu}/> 
-        <div id="banner-words-center">
-          <img src={bannerLogo} id="banner-logo"/> <br />
-          <h1 id="banner-headline">STORIES OF FREEDOM</h1>
-        </div>
-        {/* if menu overlay is clicked  */}
-        {menuOpen && 
-          <div className="menu"> 
-          <img src={escapeLogo} height='50px' id="escape-logo" onClick={toggleMenu}/>
-            <div className="menu-titles">
-              <p>Harley-Davidson riders on how motorcycles helped them find their purpose</p>
-              <p>I'm the only woman in my group and at times, I also lead the group</p>
-              <p>Riding is a family affair</p>
-              <p>More stories of freedom</p>
-            </div>
+      <div className="bannerContainer">
+        <div className="banner">
+          <img src={bannerPhoto} id="banner-photo" />
+          <img src={companyLogo} id="company-logo" />
+          <img src={menuLogo} id="menu-logo" onClick={toggleMenu} />
+          <div id="banner-words-center">
+            <img src={bannerLogo} id="banner-logo" /> <br />
+            <h1 id="banner-headline">STORIES OF FREEDOM</h1>
           </div>
-        }
+          {/* if menu overlay is clicked  */}
+          {menuOpen && (
+            <div className="menu">
+              <img
+                src={escapeLogo}
+                height="30px"
+                id="escape-logo"
+                onClick={toggleMenu}
+              />
+              <div className="menu-titles">
+                {/* map json to display titles */}
+                {articles.map((article, index) => (
+                  <p key={index}>{article.title}</p>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+        <span id="banner-bottom"></span>
       </div>
-      <span id="banner-bottom"></span>
-    </div>
     </>
   );
 };

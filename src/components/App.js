@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import Banner from './Banner';
+import Body from './Body';
 import './App.css'
 
 class App extends Component {
@@ -7,6 +8,7 @@ class App extends Component {
         return (
             <div>
                 <Banner/>
+                <Body/>
             </div>
         )
     }
