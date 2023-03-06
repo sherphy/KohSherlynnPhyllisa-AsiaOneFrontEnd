@@ -1,8 +1,19 @@
 @font-face {
-    font-family: 'Visby CF';
-    src:url('../assets/visbyCF');
+    font-family: 'Visby Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/VisbyRegular.woff') format('woff');
 }
 
+@font-face {
+    font-family: 'Visby Extra Bold';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../assets/VisbyExtrabold.woff') format('woff');
+}
+
+
 * {
-    font-family: 'Visby CF', 'Courier New', Courier, monospace
+    font-family: 'Visby Regular', Arial, Helvetica, sans-serif;
+    font-size: medium;
 }

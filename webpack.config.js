@@ -37,7 +37,7 @@ module.exports = {
                 use: {
                     loader: 'url-loader',
                     options: {
-                        limit: 25000
+                        limit: 2500000
                     }
                 }
             },
@@ -46,8 +46,8 @@ module.exports = {
             
             //for fonts 
             {
-                test: /\.(woff|woff2|ttf|otf)$/,
-                loader: 'file-loader'
+                test: /\.(woff|woff2|ttf|eot)$/,
+                type: 'asset/resource',
               },
         ]
     }

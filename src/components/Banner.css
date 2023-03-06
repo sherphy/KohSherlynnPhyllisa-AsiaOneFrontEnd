@@ -1,7 +1,60 @@
+.bannerContainer {
+    width: 100%;
+    height: auto;
+}
+
+.banner {
+    position: relative;
+}
+
 #banner-photo {
     width: 100%;
     height: auto;
     display: block;
+    object-fit: cover;
+}
+
+#company-logo {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    height: 2rem;
+}
+
+#menu {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    height: 1rem;
+}
+
+#banner-words-center {
+    color: white;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#banner-headline {
+    font-family: 'Visby Extra Bold';
+    font-size: 1.5rem;
+    white-space: nowrap;
+    font-weight: bolder;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#banner-logo {
+    width: 3rem;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -120%);
 }
 
 #banner-bottom {
@@ -9,4 +62,19 @@
     border: 0.1rem black solid;
     background-color: #D9D9D9;
     display: block;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    #banner-headline {
+        font-size: 3rem;
+    }
+    
+    #banner-logo {
+        width: 6rem;
+    }
+
+    #banner-photo {
+        max-height: 30vh;
+    }
 }

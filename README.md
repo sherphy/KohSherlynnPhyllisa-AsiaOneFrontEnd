@@ -13,4 +13,18 @@ LEARNING POINTS:
 I ran into a lot of error codes, especially with the babel loaders, that led me on a wild chase around StackOverflow
 Overall it was a fun experience going under the hood!
 
+2. Spent an ungodly amount of time importing with @font-face 
+
+--SOLVED-- just had to re-download webpack 
+
+I tried troubleshooting it by importing different fonts too, but none worked. I doubt it's a corrupt font file either, since I tried downloading Visby from different sources too, and in different formats 
+
+I believe it's something to do with my webpack configuration, but I'm unable to solve the problem and it's been 2 hours 
+{ test: /\.(woff|woff2|ttf|eot)$/,
+   type: 'asset/resource' } should have worked 
+You can refer to App.css - I believe my @font-face code should be right
+
+DISCREPENCIES: 
+1. For the banner header, our photos have inverted resizing - probably because I designed mobile-first instead of desktop-first (I used object-fill: cover; width: 100%; height: auto; for phone view, while desktop media query displays max-height: 30vh) 
+
 sorry if some naming conventions are weird 
