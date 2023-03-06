@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'Visby CF';
+    src:url('../assets/visbyCF');
+}
+
+* {
+    font-family: 'Visby CF', 'Courier New', Courier, monospace
+}
