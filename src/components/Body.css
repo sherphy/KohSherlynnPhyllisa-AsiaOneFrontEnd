@@ -1,20 +1,33 @@
 .body-container {
-    margin: 1rem 2rem;
-    text-align: left;
+  margin: 1rem 2rem;
+  text-align: left;
 }
 
 .body-header {
-    color: #695E3E;
-    text-align: center;
+  color: #695e3e;
+  text-align: center;
 }
 
 h1 {
-    font-family: "Visby Extra Bold";
-    font-size: 20px;
+  font-family: "Visby Extra Bold";
+  font-size: 20px;
+}
+
+#quote-mobile {
+  width: 80%;
+  display: block;
+  margin: auto;
+}
+
+#quote-landscape {
+  width: 60%;
+  display: block;
+  margin: auto;
+  padding: 0.5rem 0rem;
 }
 
 @media only screen and (min-width: 768px) {
-    .body-container {
-        margin: 1rem 15rem;
-    }
+  .body-container {
+    margin: 1rem 15rem;
+  }
 }

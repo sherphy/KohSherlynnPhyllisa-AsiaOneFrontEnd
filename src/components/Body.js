@@ -4,7 +4,6 @@ import quoteLandscape from "../assets/quoteLandscape.png";
 import quoteMobile from "../assets/quoteMobile.png";
 import news from "../assets/data.json";
 import React from "react";
-import { useState } from "react";
 
 const Body = () => {
   const newsFormatted = news.map((item) => {
@@ -28,8 +27,12 @@ const Body = () => {
           </div>
           {paraFormatted[0]}
           <picture>
-            <source media="(min-width: 768px)" srcSet={quoteLandscape}/>
-            <img src={quoteMobile}/>
+            <source
+              media="(min-width: 768px)"
+              srcSet={quoteLandscape}
+              id="quote-landscape"
+            />
+            <img src={quoteMobile} id="quote-mobile" />
           </picture>
         </div>
       </div>
