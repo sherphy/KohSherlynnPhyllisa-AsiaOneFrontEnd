@@ -1,0 +1,38 @@
+.footer-container {
+    width: 100%;
+}
+
+.footer-container img {
+    width: 100%;
+    height: auto;
+}
+
+#footer-bot-desktop {
+    margin-top: -17px;
+}
+
+#footer-bot-mobile {
+    background-color: black;
+    color: #FF6D00;
+    margin-top: -17px;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+ul {
+    list-style-type: none;
+    /* to distance the final sentence */
+    margin-bottom: 2rem;
+    padding: 0;
+}
+
+li {
+    margin-top: 1rem;
+}
+
+#footer-bot-mobile img{
+    width: 60%;
+    display: block;
+    padding-top: 3rem;
+    margin: 0 auto 2rem auto;
+}

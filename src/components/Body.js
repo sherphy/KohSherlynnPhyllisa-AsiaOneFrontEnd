@@ -54,12 +54,16 @@ const Body = () => {
             </div>
           )}
         </div>
-        </div>
-        <div id="intermission-banner">
-        <img src={thirdPostBanner} id="third-banner"/>
-        <p id="banner-text"> I am not going to be anyone's burden. So they are happy to have me on every trip. And many times, a woman can lead as well. </p>
-        </div>
-        <div className="body-container">
+      </div>
+      <div id="intermission-banner">
+        <img src={thirdPostBanner} id="third-banner" />
+        <p id="banner-text">
+          {" "}
+          I am not going to be anyone's burden. So they are happy to have me on
+          every trip. And many times, a woman can lead as well.{" "}
+        </p>
+      </div>
+      <div className="body-container">
         <div id="third-post">
           <div className="body-header">
             <h1>{news[2].title.toUpperCase()}</h1>
@@ -72,7 +76,7 @@ const Body = () => {
           </div>
           {paraFormatted[3]}
         </div>
-        </div>
+      </div>
     </>
   );
 };
