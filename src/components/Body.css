@@ -1,0 +1,20 @@
+.body-container {
+    margin: 1rem 2rem;
+    text-align: left;
+}
+
+.body-header {
+    color: #695E3E;
+    text-align: center;
+}
+
+h1 {
+    font-family: "Visby Extra Bold";
+    font-size: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+    .body-container {
+        margin: 1rem 15rem;
+    }
+}

@@ -24,15 +24,21 @@ I believe it's something to do with my webpack configuration, but I'm unable to 
    type: 'asset/resource' } should have worked 
 You can refer to App.css - I believe my @font-face code should be right
 
-3. Previously, I only briefly used Jest to explore it's functions. 
+3. I've never worked with such long strings in JSON before, and it took awhile for me to figure out how to convert the special characters back to string. Was quite annoying that I couldn't use parse or stringify.
+What I did in the end was replace all the \" with ", then find all the \n and map them into a new paragraph
+
+4. Learned how to use <picture> to provide different images for different dimensions
+
+5. Previously, I only briefly used Jest to explore it's functions. 
 
 DISCREPENCIES: 
 1. For the banner header, our photos have inverted resizing - probably because I designed mobile-first instead of desktop-first (I used object-fill: cover; width: 100%; height: auto; for phone view, while desktop media query displays max-height: 30vh). Same inversion goes for menu overlay height
-2. I haven't used Redux. While I theoretically roughly know what Redux does, I've never had applications that required large-scale enough state management. I'll be learning it and completing it in my later commits, but for now I'll commit what I have!
+2. I haven't used Redux. While I theoretically roughly know what Redux does, I've never had applications that required large-scale enough state management. Even now, I'm not quite sure what state there is apart from opening the menu actually. I'll be learning it and completing it in my later commits, but for now I'll commit what I have!
 
 IMPROVEMENTS:
 1. I want to clamp the menu overlay height. I want it to be clamp(minimum-banner,33vh,maximum-content) in case the sentences overflow
 2. I would've used MUI for the icons but I'm not sure if that's what you want, so I copied the icons directly. Otherwise, I would've put the MUI icons in a flex-row and adjusted the border-radius
+Same goes for the quote with the icon - I can't extract either of them individually, so I rendered the image itself. Anyway, I assume it's just a matter of putting them in a flex container.
 3. Automatically insert '\' to escape double quote in JSON, but I don't know how to directly make algorithms for JSON 
 
 sorry if some naming conventions are weird 
