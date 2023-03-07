@@ -18,6 +18,11 @@ module.exports = {
         })
     ],
 
+    //for jest
+    // presets: [
+    //     presets: [['@babel/preset-env', {targets: {node: 'current'}}]],
+    // ],
+
     // need babel loader for React
     // no need transpile node_modules
     module: {
