@@ -10,12 +10,11 @@ module.exports = {
     watch: true,
     //was throwing warnings so i added mode
     mode: 'development',
-    
     // for index.html 
     plugins: [
         new HTMLWebpackPlugin({
             template:'./src/index.html'
-        })
+        }), 
     ],
 
     // need babel loader for React
@@ -23,14 +22,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /.js$/,
+                test: /\.(js)x?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        "presets": ["@babel/preset-env", "@babel/preset-react"]
-                    }
-                }
+                        presets: [ "@babel/preset-env",
+                        ['@babel/preset-react', {runtime: 'automatic'}],
+                            ]}
+                },
+                resolve: { extensions: ['.jsx', '.js'], }
             },
             //for photos
             {
