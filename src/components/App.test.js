@@ -11,9 +11,11 @@ describe('<Banner/>', () => {
         const wrapper = shallow(<Banner/>);
         const menu = wrapper.find('menu');
         const menuLogo = wrapper.find('#menu-logo');
-        const menuExit = wrapper.find('#escape-logo');
+        console.log(menuLogo.debug());
         menuLogo.simulate('click');
         expect(menu.length > 0);
+        const menuExit = wrapper.find('#escape-logo');
+        console.log(menuExit.debug());
         menuExit.simulate('click');
         expect(menu.length < 0);
     });
