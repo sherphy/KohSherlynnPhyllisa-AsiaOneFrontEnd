@@ -14,6 +14,7 @@ describe('<Banner/>', () => {
         console.log(menuLogo.debug());
         menuLogo.simulate('click');
         expect(menu.length > 0);
+        // can only find after menuLogo has been clicked
         const menuExit = wrapper.find('#escape-logo');
         console.log(menuExit.debug());
         menuExit.simulate('click');

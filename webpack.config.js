@@ -31,7 +31,7 @@ module.exports = {
                         ['@babel/preset-react', {runtime: 'automatic'}],
                             ]}
                 },
-                resolve: { extensions: ['.jsx', '.js'], }
+                resolve: { extensions: ['.jsx', '.js', '.json'], }
             },
             //for photos
             {
