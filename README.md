@@ -9,7 +9,7 @@
 - ReactJS ✓
 - Redux/Mobx for State Management
 - Consumption of a JSON file to render content ✓
-- Creation of 1 frontend unit test case on 1 of your components with Jest and Enzyme
+- Creation of 1 frontend unit test case on 1 of your components with Jest and Enzyme ✓
 
 **LEARNING POINTS:**
 
@@ -32,10 +32,7 @@ What I did in the end was replace all the \" with ", then find all the \n and ma
 4. Learned how to use `<picture>` to provide different images for different dimensions
 
 5. Previously, I only briefly used Jest to explore it's functions. I'm learning to use Jest and Enzyme now! But webpack configuration with Jest... was annoying...
-
-6. Overall I thought this was a really well structured assignment that tested everything in different ways
-
-7. I keep getting:
+I keep getting:
    Support for the experimental syntax 'jsx' isn't currently enabled (9:31):
    describe('<Banner/>', () => {
    it('toggles menu when logo is clicked', () => {
@@ -57,9 +54,9 @@ What I did in the end was replace all the \" with ", then find all the \n and ma
 
    I honestly can't figure it out, and have exhausted StackOverflow and documentation. 
 
-   Why was this literally so hard
-   Answers: https://stackoverflow.com/questions/39418555/syntaxerror-with-jest-and-react-and-importing-css-files 
-   __mocks__/styleMock.js
+   Why was this literally so hard. Jest documentation for webpack: 
+ 
+ __mocks__/styleMock.js
 
 module.exports = {};
 __mocks__/fileMock.js
@@ -75,6 +72,7 @@ If you are using CSS Modules then it's better to mock a proxy to enable classNam
     },
   }
 }
+
 But you will need to install identity-obj-proxy package as a dev dependancy i.e.
 
 yarn add identity-obj-proxy -D 
@@ -82,6 +80,7 @@ yarn add identity-obj-proxy -D
 https://stackoverflow.com/questions/37104033/error-it-looks-like-you-called-mount-without-a-global-document-being-loaded
 
 npm install --save-dev --save-exact jsdom jsdom-global
+
 Then:
 
 import 'jsdom-global/register'; //at the top of file, even before importing React
@@ -100,8 +99,9 @@ the error Enzyme Internal Error: Enzyme expects an adapter to be configured, but
 appears... 
 
 and react 16 onwards isn't supported with enzyme!! angry!!!
-so i downloaded an unofficial one https://www.npmjs.com/package/@cfaester/enzyme-adapter-react-18 but it said "Cannot find module 'prop-types' from 'node_modules/@cfaester/enzyme-adapter-react-18/dist/enzyme-adapter-utils/createMountWrapper.js'" 
-so i installed prop-types
+so I downloaded an unofficial one https://www.npmjs.com/package/@cfaester/enzyme-adapter-react-18 
+but it said "Cannot find module 'prop-types' from 'node_modules/@cfaester/enzyme-adapter-react-18/dist/enzyme-adapter-utils/createMountWrapper.js'" 
+so I installed prop-types
 
 **DISCREPENCIES:**
 
@@ -130,3 +130,5 @@ Same goes for the footer - the top banner comes in a complete image, so mobile a
 2. Would've liked to template body pages into a page template, then I could reuse and recreate the pages faster. But for this case, I don't think it's appropriate, because the elements are quite different (i.e. photo responsiveness and photo placement)
 
 3. I don't know how to make #third-banner fullscreen unless I remove it from the div. I spent a long time trying width: 100% and trying to adjust margin-left(other methods would overflow-x). But when it's width 100% it would be confined to it's parent's (.body-container) style. Now the DOM makes less sense when read, but no choice. I'll figure it out soon hopefully! Maybe something to do with .body-container box-sizing:border-box?
+
+4. I can't add link to "here". If I do a href in JSON it will render it as a string. But if I replace "here" for paraFormatted[3][8].props.children and use document.createElement('a') it doesn't make it a hyperlink either
